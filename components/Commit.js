@@ -1,4 +1,5 @@
 import {useMemo, useState} from "react";
+import {IoIosArrowDown} from 'react-icons/io';
 import CommitDescription from "./CommitDescription";
 
 export default function Commit({data}) {
@@ -18,11 +19,14 @@ export default function Commit({data}) {
             {description.length ?
                 <>
                     <span
-                        className="absolute inline-block cursor-pointer p-2 right-0 top-0 mr-2 mt-2 select-none font-bold text-blue-400"
-                        onClick={() => setShowDescription(!showDescription)}>X</span>
+                        className="absolute inline-block cursor-pointer right-0 top-0 pt-[3px] mr-4 mt-4 select-none text-xl font-bold text-blue-400"
+                        onClick={() => setShowDescription(!showDescription)}>
+                        <IoIosArrowDown className={ 'transition-all ' + (!showDescription ? '-rotate-90' : '') }/>
+                    </span>
 
                     <div
-                        className={[!showDescription ? 'hidden' : '', 'shadow-md shadow-inner', 'p-3', 'mt-5'].join(' ')}>
+                        className={[!showDescription ? 'hidden' : '', 'shadow-md shadow-inner p-3 mt-5 rounded-sm border border-gray-100'].join(' ')}>
+                        <h3 className="text-lg font-medium mb-2">Description </h3>
                         <CommitDescription descriptions={description}/>
                     </div>
                 </>
