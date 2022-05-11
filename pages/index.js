@@ -2,8 +2,10 @@ import Commit from "../components/Commit";
 
 export default function Index({data}) {
     return (
-        <div>
-            <ul>
+        <div className="w-full max-w-4xl mx-auto space-y-10">
+            <h1 className="text-center text-6xl">Git <span className="font-bold text-blue-400">History</span></h1>
+
+            <ul className="space-y-5">
                 {data.map(entry => (
                     <Commit key={entry.sha} data={entry}/>
                 ))}
