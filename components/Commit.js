@@ -11,8 +11,9 @@ export default function Commit({data}) {
     }, [data]);
 
     return (
-        <li className="shadow p-4 rounded-sm border border-gray-100 relative focus:outline-none focus:ring focus:ring-blue-200" tabIndex="0">
-        <span className="focus:ring focus:ring-blue-400">{title}</span>
+        <li className="shadow p-4 rounded-sm border border-gray-100 relative focus:outline-none focus:ring focus:ring-blue-200"
+            tabIndex="0">
+            <span className="focus:ring focus:ring-blue-400">{title}</span>
 
             {description.length ?
                 <>
