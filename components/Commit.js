@@ -7,7 +7,7 @@ export default function Commit({data}) {
         const {message} = data.commit;
         const [title, ...description] = message.split('\n');
 
-        return [title, description];
+        return [title, !description[0] ? description.slice(1) : description];
     }, [data]);
 
     return (
