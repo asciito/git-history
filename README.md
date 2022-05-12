@@ -46,7 +46,7 @@ npm run start
 yarn start
 ```
 
-Then the project will start at 'http://localhost:300' by default.
+Then the project will start at 'http://localhost:3000' by default.
 And that's it, now you can deploy the application.
 
 ## Deploy on Vercel
